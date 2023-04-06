@@ -1,17 +1,20 @@
+# Knights Creator
+
 ## importante!
-Criar arquivo .env com base no .EXAMPLE tanto da API quanto do front
+Criar arquivo .ENV com base no .EXAMPLE tanto da Api quanto do Front
 
 ### Mongodb
-Subir mongodb 
 user: mongoadmin
 pass: secret
 
-Caso user e senha seja diferente, trocar no .env da API
+Caso user e senha seja diferente, necessário trocar no .env da API
 
 ### Run front (vue - vite)
 $ cd front
+<br>
 $ npm run dev
 
 ### Run API
 $ cd api 
-$ npm run start dev 
+<br>
+$ npm run start:dev 

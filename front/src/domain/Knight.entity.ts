@@ -10,7 +10,6 @@ export class KnightEntity implements KnightDto {
         public name: string,
         public age: number,
         public weapons: Array<WeaponViewModel>,
-        // public weapons: Array<any>,
         public keyAttribute: any,
         public attack: number,
         public exp: number
