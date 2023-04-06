@@ -1,8 +1,6 @@
-// import {KnightModel} from "@/data/knight.model";
 import {BaseEntity} from "@/domain/base-entity";
 import {KnightDto, KnightModel, WeaponModel} from "commonTypes";
 import {Attributes, EKnightKeyAttributes} from "commonTypes";
-// import {WeaponModel} from "@/data/weapon.model";
 
 export class KnightEntity extends BaseEntity<KnightDto> implements KnightModel {
     

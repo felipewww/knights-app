@@ -1,4 +1,3 @@
-// import {SaveKnightSO} from "@/domain/knight/knight.dto";
 import * as joi from "joi"
 import {EKnightKeyAttributes} from "commonTypes";
 
@@ -28,7 +27,3 @@ export function UpdateKnightVMSchema() {
     
     return joi.object(schema)
 }
-
-// export interface KnightViewModel extends SaveKnightSO {
-//
-// }
