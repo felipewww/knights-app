@@ -3,9 +3,7 @@
         <div v-for="entity of entities">
             <KnightCard
                 v-if="!entity.deleted"
-                :card-type="listType"
-                @save="repo.update(entity)"
-                @delete="repo.delete(entity)"
+                :card-type="'heroes'"
                 :entity="entity">
 
             </KnightCard>
@@ -22,21 +20,21 @@ import KnightCard from "@/presentation/components/KnightCard.vue";
 interface IData {
     entities: Array<KnightEntity>,
     repo: KnightsRepo,
-    listType: FilterType
 }
 
 export default defineComponent({
     name: "List",
     components: {KnightCard},
     data(): IData {
+        console.log(this.$route)
+
         return {
             entities: [],
             repo: new KnightsRepo(),
-            listType: (this.$route.query.filter && this.$route.query.filter === 'heroes') ? 'heroes' : 'alive'
         }
     },
     mounted() {
-        this.repo.all(this.listType)
+        this.repo.all('heroes')
             .then(res => {
                 this.entities = res
             })

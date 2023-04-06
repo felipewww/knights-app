@@ -4,6 +4,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
     <div>
+        <router-link to="/knights">Knights</router-link>
+        <router-link to="/heroes">Heroes</router-link>
+        <router-link to="/knights/create">Create Knight</router-link>
+    </div>
+    <div>
         <RouterView />
     </div>
 </template>
