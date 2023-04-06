@@ -1,6 +1,6 @@
 import type {BaseService} from "@/data/BaseService";
 import {KnightsService} from "@/data/Knights.service";
-import type {KnightDto} from "commonTypes/src/domain/knight.dto";
+import {KnightDto} from "commonTypes/src/domain/knight.dto";
 import {KnightEntity} from "@/domain/Knight.entity";
 import {KnightVMEntity} from "@/domain/KnightVM.entity";
 

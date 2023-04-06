@@ -1,7 +1,7 @@
-import {Attributes, EKnightKeyAttributes, KnightViewModel} from "commonTypes";
-import type {WeaponViewModel} from "commonTypes";
+import {Attributes, EKnightKeyAttributes, KnightViewModel} from "commonTypes/src/presentation/knight.vm";
+import { WeaponViewModel } from "commonTypes/src/presentation/weapon.vm";
 
-export class KnightVMEntity implements KnightViewModel {
+export class KnightVMEntity implements KnightViewModel{
     constructor(
         public name: string,
         public nickname: string,
