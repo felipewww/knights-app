@@ -4,7 +4,7 @@ import {KnightDto} from "commonTypes/src/domain/knight.dto";
 import {KnightEntity} from "@/domain/Knight.entity";
 import {KnightVMEntity} from "@/domain/KnightVM.entity";
 
-export type FilterType = "alive"|"hero"
+export type FilterType = "alive"|"heroes"
 
 export class KnightsRepo {
     private service: BaseService;
@@ -36,7 +36,7 @@ export class KnightsRepo {
     
     private applyFilterQueryParams(type: FilterType) {
         const queryParams: { filter?: "heroes" } = {}
-        if (type == "hero") {
+        if (type == "heroes") {
             queryParams.filter = "heroes"
         }
         
@@ -45,6 +45,11 @@ export class KnightsRepo {
     
     public async update(knight: KnightEntity) {
         return this.service.put(knight._id, {nickname: knight.name})
+    }
+    
+    public async delete(knight: KnightEntity) {
+        knight.deleted = true;
+        return this.service.delete(knight._id)
     }
     
     public create(knightVM: KnightVMEntity) {
