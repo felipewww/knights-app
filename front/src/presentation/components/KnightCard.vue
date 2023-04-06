@@ -8,9 +8,10 @@
         <div>attack: {{entity.attack}}</div>
 
         <div v-if="cardType !== 'heroes'" class="actions">
-            <div @click="$emit('save')">SAVE</div>
-            <div @click="$emit('delete')">DELETE</div>
+            <div class="save" @click="$emit('save')">SAVE</div>
+            <div class="delete" @click="$emit('delete')">DELETE</div>
         </div>
+        <div class="clearfix"></div>
 
         <br>
     </div>
@@ -42,5 +43,19 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.actions .delete {
+    color: #ff0045;
+}
 
+.actions .save {
+    color: #bedc80;
+}
+.actions > div {
+    cursor: pointer;
+    float: left;
+    border-radius: 3px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: 'Bree Serif', serif;
+}
 </style>

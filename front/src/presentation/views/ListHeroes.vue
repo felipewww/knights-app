@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-for="entity of entities">
+    <div class="list-container">
+        <div class="kn-card-box" v-for="entity of entities">
             <KnightCard
                 v-if="!entity.deleted"
                 :card-type="'heroes'"
